@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="assets/apple-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
   <style>
     :root {
       --black: #1C1B19;
@@ -37,8 +37,8 @@
       flex-direction: column;
       background: var(--white);
       color: var(--black);
-      font-family: "Jost", -apple-system, "Segoe UI", sans-serif;
-      font-weight: 300;
+      font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; }
@@ -47,7 +47,7 @@
       color: var(--ivory);
       text-align: center;
       font-size: 11px;
-      letter-spacing: .26em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       padding: 10px 16px;
     }
@@ -65,22 +65,21 @@
     .mark img { width: min(100%, 380px); height: auto; display: block; }
     .eyebrow {
       font-size: 12px;
-      letter-spacing: .3em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--sage);
       margin: 0 0 26px;
-      font-weight: 400;
+      font-weight: 500;
     }
     h1 {
-      font-family: "Bodoni Moda", Didot, Georgia, serif;
       font-optical-sizing: auto;
-      font-weight: 400;
+      font-weight: 600;
       font-size: clamp(40px, 4.8vw, 68px);
       line-height: 1.02;
-      letter-spacing: -.01em;
+      letter-spacing: -.03em;
       margin: 0;
     }
-    h1 em { font-style: italic; }
+    h1 em { font-style: normal; color: var(--olive); }
     .rule { width: 56px; height: 1px; background: var(--black); margin: 32px 0; border: 0; }
     .intro {
       max-width: 42ch;
@@ -93,18 +92,20 @@
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       height: 50px; padding: 0 30px;
-      font-size: 12px; letter-spacing: .22em; text-transform: uppercase;
-      text-decoration: none; font-weight: 400;
+      font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+      text-decoration: none; font-weight: 600;
       border: 1px solid var(--black);
       transition: background .3s ease, color .3s ease, border-color .3s ease;
     }
     .btn-solid { background: var(--black); color: var(--ivory); }
     .btn-solid:hover { background: var(--olive); border-color: var(--olive); }
     .btn-ghost:hover { background: var(--lime); border-color: var(--lime); }
+    .contact { margin: 22px 0 0; font-size: 15px; color: var(--muted); }
+    .contact a { color: var(--black); text-underline-offset: 4px; }
     .pillars {
       list-style: none; padding: 0; margin: 48px 0 0;
       display: flex; gap: 28px; flex-wrap: wrap;
-      font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--sage);
+      font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--sage);
     }
     .pillars li { display: flex; align-items: center; gap: 10px; }
     .pillars svg { width: 22px; height: 22px; stroke: var(--black); fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
@@ -156,6 +157,7 @@
         <a class="btn btn-solid" href="https://www.instagram.com/cocolime.cl/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a class="btn btn-ghost" href="https://www.tiktok.com/@cocolime.cl" target="_blank" rel="noopener noreferrer">TikTok</a>
       </div>
+      <p class="contact">Escríbenos a <a href="mailto:contacto@cocolime.cl">contacto@cocolime.cl</a></p>
       <ul class="pillars fade d3" aria-label="Lo que nos mueve">
         <li>
           <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 37c-5-6-5-16 0-24 5 8 5 18 0 24Zm0 0c-8-2-13-8-14-16 7 1 12 6 14 16Zm0 0c8-2 13-8 14-16-7 1-12 6-14 16Z"/></svg>
@@ -175,6 +177,7 @@
 
   <footer>
     <span>© <span id="year">2026</span> COCO LIME · Santiago, Chile</span>
+    <a href="mailto:contacto@cocolime.cl">contacto@cocolime.cl</a>
     <span>Move · Feel · Be well</span>
   </footer>
   <script>
