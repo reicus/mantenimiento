@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1C1B19">
-  <title>COCOLIME | Ropa deportiva para mujer · Muy pronto</title>
+  <meta name="theme-color" content="#1A1C17">
+  <title>COCOLIME | Ropa deportiva premium para mujer · Muy pronto</title>
   <meta name="description" content="COCOLIME, ropa deportiva premium para mujer en Chile: sets, calzas, enteritos y vestidos de tenis. Muy pronto abrimos nuestra tienda online.">
   <link rel="canonical" href="https://cocolime.cl/">
   <meta name="robots" content="index, follow">
@@ -13,23 +13,23 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cocolime.cl/">
   <meta property="og:title" content="COCOLIME · Muy pronto">
-  <meta property="og:description" content="Ropa deportiva premium para mujer. Move · Feel · Be well.">
+  <meta property="og:description" content="Ropa deportiva premium para mujer. Fuerza · Energía · Equilibrio.">
   <meta property="og:image" content="https://cocolime.cl/assets/og.png?v=1.0.2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Logo de COCOLIME">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="COCOLIME · Muy pronto">
-  <meta name="twitter:description" content="Ropa deportiva premium para mujer. Move · Feel · Be well.">
+  <meta name="twitter:description" content="Ropa deportiva premium para mujer. Fuerza · Energía · Equilibrio.">
   <meta name="twitter:image" content="https://cocolime.cl/assets/og.png?v=1.0.2">
   <meta name="facebook-domain-verification" content="qr98t8wdh5ujmdjqhjcnp7dk1szphb">
   <link rel="icon" href="favicon.ico?v=1.0.2" sizes="any">
   <link rel="icon" type="image/svg+xml" href="assets/icon.svg?v=1.0.2">
   <link rel="apple-touch-icon" href="assets/apple-icon.png?v=1.0.2">
-  <link rel="preload" as="image" href="assets/fotos/set-lima-800.webp" imagesrcset="assets/fotos/set-lima-480.webp 480w, assets/fotos/set-lima-800.webp 800w" imagesizes="(max-width: 820px) 60vw, 30vw">
+  <link rel="preload" as="image" href="assets/fotos/set-lima-800.webp" imagesrcset="assets/fotos/set-lima-480.webp 480w, assets/fotos/set-lima-800.webp 800w" imagesizes="(max-width: 820px) 70vw, 26vw">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300..600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..500;1,6..96,400&family=Jost:wght@300..500&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,16 +44,13 @@
   </script>
   <style>
     :root {
-      --black: #1C1B19;
+      --night: #1A1C17;
+      --olive-deep: #262A21;
+      --olive: #3A4033;
       --ivory: #F1EDE4;
-      --sand: #E3DCCF;
-      --mist: #F4F2ED;
+      --ivory-dim: rgba(241, 237, 228, .62);
+      --ivory-line: rgba(241, 237, 228, .16);
       --lime: #C3CD78;
-      --sage: #6E7468;
-      --line: #E4E0D8;
-      --white: #FFFFFF;
-      --olive: #4E5641;
-      --muted: #5E5A53;
       --serif: "Bodoni Moda", Didot, "Times New Roman", serif;
       --sans: "Jost", -apple-system, "Segoe UI", sans-serif;
     }
@@ -63,156 +60,174 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background: var(--white);
-      color: var(--black);
+      background: var(--night);
+      color: var(--ivory);
       font-family: var(--sans);
-      font-weight: 400;
+      font-weight: 300;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      position: relative;
     }
     a { color: inherit; }
-    .bar {
-      background: var(--black);
-      color: var(--ivory);
-      text-align: center;
-      font-size: 11px;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      padding: 10px 16px;
+
+    /* Dark fabric: soft folds of olive light, drawn with gradients (no image). */
+    .fabric {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(120% 60% at 20% 110%, rgba(74, 82, 64, .55), transparent 60%),
+        radial-gradient(90% 50% at 85% -10%, rgba(74, 82, 64, .45), transparent 60%),
+        linear-gradient(170deg, var(--olive-deep) 0%, var(--night) 55%, #141612 100%);
     }
-    .bar b { color: var(--lime); font-weight: 500; }
+    .fabric svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+    .grain {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    }
+
+    header {
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 28px 0;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--ivory-dim);
+    }
+    header .lockup { width: clamp(150px, 16vw, 200px); height: auto; display: block; }
+
     main {
       flex: 1;
-      width: min(1240px, calc(100% - 40px));
+      width: min(1280px, calc(100% - 48px));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
       align-items: center;
-      gap: clamp(40px, 6vw, 96px);
-      padding: clamp(40px, 6vw, 80px) 0;
+      gap: clamp(40px, 7vw, 112px);
+      padding: clamp(24px, 5vw, 64px) 0 clamp(48px, 7vw, 96px);
     }
-    .logo { display: block; width: min(220px, 60%); height: auto; margin: 0 0 40px; }
     .eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
-      color: var(--sage); margin: 0 0 22px; font-weight: 500;
+      display: flex; align-items: center; gap: 14px;
+      font-size: 11px; letter-spacing: .32em; text-transform: uppercase;
+      color: var(--lime); margin: 0 0 30px; font-weight: 400;
     }
-    .eyebrow::before {
-      content: ""; width: 8px; height: 8px; border-radius: 50%;
-      background: var(--lime); box-shadow: 0 0 0 0 rgba(195, 205, 120, .7);
-      animation: pulse 2.4s infinite;
-    }
-    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(195, 205, 120, 0); } 100% { box-shadow: 0 0 0 0 rgba(195, 205, 120, 0); } }
+    .eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--lime); }
     h1 {
       font-family: var(--serif);
       font-optical-sizing: auto;
       font-weight: 400;
-      font-size: clamp(42px, 5.4vw, 78px);
-      line-height: 1;
-      letter-spacing: -.02em;
+      font-size: clamp(44px, 5.6vw, 84px);
+      line-height: 1.02;
+      letter-spacing: -.015em;
       margin: 0;
     }
-    h1 em { font-style: italic; color: var(--olive); }
-    .rule { width: 56px; height: 1px; background: var(--black); margin: 30px 0; border: 0; }
-    .intro { max-width: 44ch; font-size: 17px; line-height: 1.75; color: var(--muted); margin: 0; font-weight: 300; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    h1 em { font-style: italic; color: var(--lime); }
+    .intro { max-width: 40ch; font-size: 16px; line-height: 1.85; color: var(--ivory-dim); margin: 34px 0 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 42px; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      height: 50px; padding: 0 28px;
-      font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
-      text-decoration: none; font-weight: 500;
-      border: 1px solid var(--black);
-      transition: background .3s ease, color .3s ease, border-color .3s ease;
+      height: 52px; padding: 0 30px;
+      font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+      text-decoration: none; font-weight: 400;
+      border: 1px solid var(--ivory-line);
+      transition: background .4s ease, color .4s ease, border-color .4s ease;
     }
-    .btn svg { width: 16px; height: 16px; fill: currentColor; }
-    .btn-solid { background: var(--black); color: var(--ivory); }
-    .btn-solid:hover { background: var(--olive); border-color: var(--olive); }
-    .btn-ghost:hover { background: var(--lime); border-color: var(--lime); }
-    .contact { margin: 22px 0 0; font-size: 15px; color: var(--muted); }
-    .contact a { color: var(--black); text-underline-offset: 4px; }
-    .pillars {
-      list-style: none; padding: 0; margin: 44px 0 0;
-      display: flex; gap: 28px; flex-wrap: wrap;
-      font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--sage);
-    }
-    .pillars li { display: flex; align-items: center; gap: 10px; }
-    .pillars svg { width: 22px; height: 22px; stroke: var(--black); fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+    .btn svg { width: 15px; height: 15px; fill: currentColor; }
+    .btn-solid { background: var(--ivory); color: var(--night); border-color: var(--ivory); }
+    .btn-solid:hover { background: var(--lime); border-color: var(--lime); }
+    .btn-ghost:hover { border-color: var(--ivory); }
+    .contact { margin: 26px 0 0; font-size: 14px; color: var(--ivory-dim); letter-spacing: .02em; }
+    .contact a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid var(--ivory-line); padding-bottom: 2px; }
+    .contact a:hover { border-color: var(--lime); }
 
-    /* Photo mosaic: three catalog photos, staggered. */
-    .mosaic {
-      position: relative;
+    /* Editorial gallery: three looks, framed thin, slightly muted. */
+    .gallery {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: clamp(12px, 1.6vw, 20px);
+      grid-template-columns: 1.15fr 1fr;
+      gap: clamp(14px, 1.6vw, 22px);
+      align-items: stretch;
+      width: 100%; max-width: 640px; justify-self: end;
     }
-    .mosaic figure { margin: 0; position: relative; overflow: hidden; background: var(--mist); aspect-ratio: 4 / 5; }
-    .mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
-    .mosaic figure:hover img { transform: scale(1.04); }
-    .mosaic .a { grid-row: span 2; aspect-ratio: auto; min-height: 100%; }
-    .mosaic .b { margin-top: 18%; }
-    .mosaic .c { margin-bottom: 18%; }
-    .mosaic figcaption {
-      position: absolute; left: 12px; bottom: 12px;
-      background: rgba(255, 255, 255, .92); padding: 6px 10px;
-      font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    .gallery figure { margin: 0; position: relative; overflow: hidden; background: #2b2e27; }
+    .gallery img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: saturate(.82) contrast(1.03);
+      transition: transform 1.6s cubic-bezier(.2,.7,.2,1), filter 1.2s ease;
     }
-    .stamp {
-      position: absolute; z-index: 2; left: -38px; top: 38%;
-      width: 104px; height: 104px; border-radius: 50%;
-      background: var(--lime); color: var(--black);
-      display: grid; place-items: center; text-align: center;
-      font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.05;
-      box-shadow: 0 10px 30px rgba(28, 27, 25, .12);
-      animation: spin 24s linear infinite;
+    .gallery figure:hover img { transform: scale(1.035); filter: saturate(1) contrast(1.03); }
+    .gallery figure::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(20, 22, 18, .55));
+      pointer-events: none;
     }
-    .stamp span { display: block; animation: spin 24s linear infinite reverse; }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    .gallery figcaption {
+      position: absolute; left: 18px; bottom: 16px; z-index: 1;
+      font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--ivory);
+    }
+    .gallery .tall { grid-row: span 2; }
+    .gallery .side { aspect-ratio: 4 / 5; }
 
     footer {
-      width: min(1240px, calc(100% - 40px));
+      width: min(1280px, calc(100% - 48px));
       margin: 0 auto;
-      border-top: 1px solid var(--line);
-      padding: 22px 0 28px;
-      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-      font-size: 12px; letter-spacing: .08em; color: #7A766E;
+      border-top: 1px solid var(--ivory-line);
+      padding: 24px 0 30px;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+      font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--ivory-dim);
     }
+    footer .pillars { letter-spacing: .36em; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--ivory); }
+
     /* Entrance fade is progressive: content is visible by default and only
-       animates once the page is actually on screen. Opening a link in a new
-       tab or app pauses CSS animations, which used to leave the logo blank. */
-    .anim .fade { animation: in 1.1s cubic-bezier(.2,.7,.2,1) backwards; }
-    .anim .fade.d2 { animation-delay: .15s; }
-    .anim .fade.d3 { animation-delay: .3s; }
-    .anim .fade.d4 { animation-delay: .45s; }
-    @keyframes in { from { opacity: 0; transform: translateY(14px); } }
-    @media (max-width: 820px) {
-      main { grid-template-columns: 1fr; text-align: center; gap: 44px; padding-top: 32px; }
-      .logo { margin: 0 auto 30px; width: min(180px, 55%); }
-      .rule { margin: 26px auto; }
-      .intro { margin: 0 auto; }
-      .actions, .pillars { justify-content: center; }
-      .mosaic { order: -1; width: min(100%, 460px); margin: 0 auto; }
-      .stamp { left: auto; right: 6px; top: -22px; width: 84px; height: 84px; font-size: 14px; }
+       animates once the page is actually on screen. */
+    .anim .fade { animation: in 1.4s cubic-bezier(.2,.7,.2,1) backwards; }
+    .anim .fade.d2 { animation-delay: .2s; }
+    .anim .fade.d3 { animation-delay: .4s; }
+    @keyframes in { from { opacity: 0; transform: translateY(16px); } }
+    @media (max-width: 860px) {
+      header { padding: 22px 0; }
+      header .tag { display: none; }
+      header { justify-content: center; }
+      main { grid-template-columns: 1fr; text-align: center; gap: 48px; padding-top: 8px; }
+      .eyebrow { justify-content: center; }
+      .intro { margin-left: auto; margin-right: auto; }
+      .actions { justify-content: center; }
+      .gallery { order: -1; justify-self: center; }
+      footer { justify-content: center; text-align: center; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .anim .fade, .stamp, .stamp span, .eyebrow::before { animation: none; }
-      .mosaic img { transition: none; }
+      .anim .fade { animation: none; }
+      .gallery img { transition: none; }
     }
   </style>
 </head>
 <body>
-  <div class="bar">Tienda online en preparación · <b>Envíos a todo Chile</b></div>
+  <div class="fabric" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
+      <defs>
+        <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="38"/></filter>
+        <linearGradient id="fold" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#5A6150" stop-opacity=".9"/>
+          <stop offset="1" stop-color="#1A1C17" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path filter="url(#soft)" fill="url(#fold)" d="M-100 620 C 200 470, 420 700, 720 560 S 1200 380, 1540 560 L 1540 700 C 1200 560, 980 760, 720 680 S 200 640, -100 760 Z"/>
+      <path filter="url(#soft)" fill="url(#fold)" opacity=".55" d="M-100 260 C 260 160, 520 360, 860 240 S 1300 120, 1540 220 L 1540 300 C 1260 230, 1060 380, 820 330 S 240 270, -100 360 Z"/>
+    </svg>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="fade">
+    <img class="lockup" src="assets/lockup-web-ivory.svg?v=1.1.0" alt="COCOLIME" width="2083" height="422">
+    <span class="tag">Tienda online en preparación</span>
+  </header>
 
   <main>
-    <section class="fade">
-      <img class="logo" src="assets/logo-black.svg?v=1.0.2" alt="COCOLIME" width="1697" height="840">
+    <section class="fade d2">
       <p class="eyebrow">Muy pronto</p>
       <h1>Ropa deportiva <em>premium</em> para moverte bien.</h1>
-      <hr class="rule">
       <p class="intro">
-        Estamos preparando la tienda de COCOLIME: sets, calzas, enteritos y
-        vestidos de tenis pensados para entrenar y para todo lo que viene después.
-        Síguenos y entérate primero del lanzamiento.
+        Sets, calzas, enteritos y vestidos de tenis pensados para entrenar
+        y para todo lo que viene después. Síguenos y entérate primero
+        del lanzamiento.
       </p>
       <div class="actions">
         <a class="btn btn-solid" href="https://www.instagram.com/cocolime.cl/" target="_blank" rel="noopener noreferrer">
@@ -225,43 +240,28 @@
         </a>
       </div>
       <p class="contact">Escríbenos a <a href="mailto:contacto@cocolime.cl">contacto@cocolime.cl</a></p>
-      <ul class="pillars fade d3" aria-label="Lo que nos mueve">
-        <li>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 37c-5-6-5-16 0-24 5 8 5 18 0 24Zm0 0c-8-2-13-8-14-16 7 1 12 6 14 16Zm0 0c8-2 13-8 14-16-7 1-12 6-14 16Z"/></svg>
-          Fuerza
-        </li>
-        <li>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="7"/><path d="M24 9v5M24 34v5M9 24h5M34 24h5M13.4 13.4l3.5 3.5M31.1 31.1l3.5 3.5M13.4 34.6l3.5-3.5M31.1 16.9l3.5-3.5"/></svg>
-          Energía
-        </li>
-        <li>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 17c4-3 8-3 12 0s8 3 12 0 8-3 8-3M8 24c4-3 8-3 12 0s8 3 12 0 8-3 8-3M8 31c4-3 8-3 12 0s8 3 12 0 8-3 8-3"/></svg>
-          Equilibrio
-        </li>
-      </ul>
     </section>
 
-    <div class="mosaic fade d2" aria-label="Algunas prendas de la colección">
-      <div class="stamp" aria-hidden="true"><span>Muy<br>pronto</span></div>
-      <figure class="a">
-        <img src="assets/fotos/set-lima-800.webp" srcset="assets/fotos/set-lima-480.webp 480w, assets/fotos/set-lima-800.webp 800w" sizes="(max-width: 820px) 60vw, 30vw" alt="Set deportivo color lima: musculosa con short y polera manga larga con calza" width="800" height="1000" fetchpriority="high">
+    <div class="gallery fade d3" aria-label="Algunas prendas de la colección">
+      <figure class="tall">
+        <img src="assets/fotos/set-lima-800.webp" srcset="assets/fotos/set-lima-480.webp 480w, assets/fotos/set-lima-800.webp 800w" sizes="(max-width: 860px) 55vw, 28vw" alt="Set deportivo color lima: musculosa con short y polera manga larga con calza" width="800" height="1000" fetchpriority="high">
         <figcaption>Sets</figcaption>
       </figure>
-      <figure class="b">
-        <img src="assets/fotos/enterito-rosa-800.webp" srcset="assets/fotos/enterito-rosa-480.webp 480w, assets/fotos/enterito-rosa-800.webp 800w" sizes="(max-width: 820px) 40vw, 22vw" alt="Enterito corto rosado con espalda abierta" width="800" height="1000" loading="lazy" decoding="async">
+      <figure class="side">
+        <img src="assets/fotos/enterito-rosa-800.webp" srcset="assets/fotos/enterito-rosa-480.webp 480w, assets/fotos/enterito-rosa-800.webp 800w" sizes="(max-width: 860px) 45vw, 24vw" alt="Enterito corto rosado con espalda abierta" width="800" height="1000" loading="lazy" decoding="async">
         <figcaption>Enteritos</figcaption>
       </figure>
-      <figure class="c">
-        <img src="assets/fotos/set-burdeo-800.webp" srcset="assets/fotos/set-burdeo-480.webp 480w, assets/fotos/set-burdeo-800.webp 800w" sizes="(max-width: 820px) 40vw, 22vw" alt="Set burdeo de top con pantalón acampanado y short" width="800" height="1000" loading="lazy" decoding="async">
-        <figcaption>Calzas y pantalones</figcaption>
+      <figure class="side">
+        <img src="assets/fotos/set-burdeo-800.webp" srcset="assets/fotos/set-burdeo-480.webp 480w, assets/fotos/set-burdeo-800.webp 800w" sizes="(max-width: 860px) 45vw, 24vw" alt="Set burdeo de top con pantalón acampanado y short" width="800" height="1000" loading="lazy" decoding="async">
+        <figcaption>Calzas</figcaption>
       </figure>
     </div>
   </main>
 
   <footer>
     <span>© <span id="year">2026</span> COCOLIME SpA · Santiago, Chile</span>
+    <span class="pillars">Fuerza · Energía · Equilibrio</span>
     <a href="mailto:contacto@cocolime.cl">contacto@cocolime.cl</a>
-    <span>Move · Feel · Be well</span>
   </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -271,7 +271,7 @@
       function stop() { root.classList.remove("anim"); }
       if (document.visibilityState === "visible") {
         root.classList.add("anim");
-        setTimeout(stop, 2200);
+        setTimeout(stop, 2400);
       }
       document.addEventListener("visibilitychange", stop);
       window.addEventListener("pagehide", stop);
