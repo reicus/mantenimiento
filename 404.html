@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <script>if (location.protocol === "http:" && location.hostname.indexOf("cocolime.cl") > -1) location.replace("https://" + location.host + location.pathname + location.search);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1C17">
+  <title>COCOLIME | Página no encontrada</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico?v=1.2.0" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg?v=1.2.0">
+  <link rel="apple-touch-icon" href="/assets/apple-icon.png?v=1.2.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..500;1,6..96,400&family=Jost:wght@300..500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #1A1C17;
+      --olive-deep: #262A21;
+      --olive: #3A4033;
+      --ivory: #F1EDE4;
+      --ivory-dim: rgba(241, 237, 228, .74);
+      --ivory-line: rgba(241, 237, 228, .22);
+      --lime: #C3CD78;
+      --serif: "Bodoni Moda", Didot, "Times New Roman", serif;
+      --sans: "Jost", -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--night);
+      color: var(--ivory);
+      font-family: var(--sans);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+
+    /* Dark fabric: soft folds of olive light, drawn with gradients (no image). */
+    .fabric {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(120% 60% at 20% 110%, rgba(74, 82, 64, .55), transparent 60%),
+        radial-gradient(90% 50% at 85% -10%, rgba(74, 82, 64, .45), transparent 60%),
+        linear-gradient(170deg, var(--olive-deep) 0%, var(--night) 55%, #141612 100%);
+    }
+    .fabric svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+    .grain {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    }
+
+    header {
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 28px 0;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      font-size: 12px; letter-spacing: .26em; text-transform: uppercase; color: var(--ivory-dim);
+    }
+    header .lockup { width: clamp(150px, 16vw, 200px); height: auto; display: block; }
+
+    main {
+      flex: 1;
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      align-items: center;
+      gap: clamp(40px, 7vw, 112px);
+      padding: clamp(24px, 5vw, 64px) 0 clamp(48px, 7vw, 96px);
+    }
+    .eyebrow {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 12px; letter-spacing: .32em; text-transform: uppercase;
+      color: var(--lime); margin: 0 0 30px; font-weight: 400;
+    }
+    .eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--lime); }
+    h1 {
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-size: clamp(44px, 5.6vw, 84px);
+      line-height: 1.02;
+      letter-spacing: -.015em;
+      margin: 0;
+    }
+    h1 em { font-style: italic; color: var(--lime); }
+    .intro { max-width: 42ch; font-size: 17px; line-height: 1.85; color: var(--ivory-dim); margin: 34px 0 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 42px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      height: 52px; padding: 0 30px;
+      font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
+      text-decoration: none; font-weight: 400;
+      border: 1px solid var(--ivory-line);
+      transition: background .4s ease, color .4s ease, border-color .4s ease;
+    }
+    .btn svg { width: 15px; height: 15px; fill: currentColor; }
+    .btn-solid { background: var(--ivory); color: var(--night); border-color: var(--ivory); }
+    .btn-solid:hover { background: var(--lime); border-color: var(--lime); }
+    .btn-ghost:hover { border-color: var(--ivory); }
+    .btn-wide { flex-basis: 100%; max-width: 340px; }
+    .status { margin: 22px 0 0; font-size: 15px; line-height: 1.7; color: var(--ivory); max-width: 42ch; }
+    .contact { margin: 26px 0 0; font-size: 15px; line-height: 1.7; color: var(--ivory-dim); letter-spacing: .02em; }
+    .contact a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid var(--ivory-line); padding-bottom: 2px; }
+    .contact a:hover { border-color: var(--lime); }
+
+    /* Editorial gallery: three looks, framed thin, slightly muted. */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: clamp(14px, 1.6vw, 22px);
+      align-items: stretch;
+      width: 100%; max-width: 640px; justify-self: end;
+    }
+    .gallery figure { margin: 0; position: relative; overflow: hidden; background: #2b2e27; }
+    .gallery img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;
+      filter: saturate(.82) contrast(1.03);
+      transition: transform 1.6s cubic-bezier(.2,.7,.2,1), filter 1.2s ease;
+    }
+    .gallery figure:hover img { transform: scale(1.035); filter: saturate(1) contrast(1.03); }
+    .gallery figure::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(20, 22, 18, .55));
+      pointer-events: none;
+    }
+    .gallery figcaption {
+      position: absolute; left: 18px; bottom: 16px; z-index: 1;
+      font-size: 12px; letter-spacing: .26em; text-transform: uppercase; color: var(--ivory);
+    }
+    .gallery .tall { grid-row: span 2; }
+    .gallery .side { aspect-ratio: 4 / 5; }
+
+    footer {
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+      border-top: 1px solid var(--ivory-line);
+      padding: 24px 0 30px;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+      font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ivory-dim);
+    }
+    footer .pillars { letter-spacing: .36em; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--ivory); }
+
+    /* Entrance fade is progressive: content is visible by default and only
+       animates once the page is actually on screen. */
+    .anim .fade { animation: in 1.4s cubic-bezier(.2,.7,.2,1) backwards; }
+    .anim .fade.d2 { animation-delay: .2s; }
+    .anim .fade.d3 { animation-delay: .4s; }
+    @keyframes in { from { opacity: 0; transform: translateY(16px); } }
+    @media (max-width: 860px) {
+      header { padding: 22px 0; }
+      header { flex-direction: column; justify-content: center; gap: 14px; }
+      header .tag { color: var(--lime); font-size: 11px; }
+      main { grid-template-columns: 1fr; text-align: center; gap: 48px; padding-top: 8px; }
+      .eyebrow { justify-content: center; }
+      .intro, .status { margin-left: auto; margin-right: auto; }
+      .btn-wide { max-width: none; }
+      .actions { justify-content: center; }
+      .gallery { order: -1; justify-self: center; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .gallery .tall { grid-row: auto; aspect-ratio: 4 / 5; }
+      .gallery .lead-m { grid-column: 1 / -1; order: -1; }
+      footer { justify-content: center; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .anim .fade { animation: none; }
+      .gallery img { transition: none; }
+    }
+    .lost { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+    .lost .eyebrow { justify-content: center; }
+    .lost .intro { margin-left: auto; margin-right: auto; }
+    .lost .actions { justify-content: center; }
+    header { justify-content: center; }
+  </style>
+</head>
+<body>
+  <div class="fabric" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header>
+    <a href="/"><img class="lockup" src="/assets/lockup-web-ivory.svg?v=1.2.0" alt="COCOLIME, ir al inicio" width="2083" height="422"></a>
+  </header>
+
+  <main class="lost">
+    <section>
+      <p class="eyebrow">Página no encontrada</p>
+      <h1>Esta página <em>todavía</em> no existe.</h1>
+      <p class="intro">
+        Estamos preparando la tienda online, así que por ahora solo está
+        disponible la página de inicio.
+      </p>
+      <div class="actions">
+        <a class="btn btn-solid" href="/">Ir al inicio</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/cocolime.cl/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year">2026</span> COCOLIME SpA · Santiago, Chile</span>
+    <span class="pillars">Fuerza · Energía · Equilibrio</span>
+    <a href="mailto:contacto@cocolime.cl">contacto@cocolime.cl</a>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
